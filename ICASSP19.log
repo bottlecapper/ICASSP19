@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.3)  28 OCT 2018 13:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.3)  29 OCT 2018 08:33
 entering extended mode
 **./ICASSP19.tex
 (ICASSP19.tex
@@ -230,104 +230,56 @@ Package pdftex.def Info: FIG/autoencoder.png  used on input line 145. on input
 line 145.
 Package pdftex.def Info: Requested size: 243.09818pt x 152.6491pt on input line
  145.
-<FIG/model.png, id=22, 709.14937pt x 610.53094pt>
+<FIG/model.png, id=22, 718.18312pt x 465.99094pt>
 File: FIG/model.png Graphic file (type png)
 <use FIG/model.png>
-Package pdftex.def Info: FIG/model.png  used on input line 162. on input line 1
-62.
-Package pdftex.def Info: Requested size: 243.09818pt x 209.2919pt on input line
- 162.
+Package pdftex.def Info: FIG/model.png  used on input line 163. on input line 1
+63.
+Package pdftex.def Info: Requested size: 243.09818pt x 157.73088pt on input lin
+e 163.
 <FIG/loss.png, id=23, 909.3975pt x 578.16pt>
 File: FIG/loss.png Graphic file (type png)
 <use FIG/loss.png>
-Package pdftex.def Info: FIG/loss.png  used on input line 177. on input line 17
-7.
+Package pdftex.def Info: FIG/loss.png  used on input line 178. on input line 17
+8.
 Package pdftex.def Info: Requested size: 243.09818pt x 154.55261pt on input lin
-e 177.
- [3 <./FIG/autoencoder.png> <./FIG/model.png>] [4 <./FIG/loss.png>]
-Package epstopdf Info: Source file: <image1.eps>
-(epstopdf)                    date: 2018-10-22 10:41:11
-(epstopdf)                    size: 22626 bytes
-(epstopdf)             Output file: <image1-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-10-22 10:43:43
-(epstopdf)                    size: 4058 bytes
-(epstopdf)             Command: <epstopdf --outfile=image1-eps-converted-to.pdf
- image1.eps>
-(epstopdf)             \includegraphics on input line 352.
-Package epstopdf Info: Output file is already uptodate.
-<image1-eps-converted-to.pdf, id=36, pagebox=cropbox, 261.97874pt x 58.2175pt>
-File: image1-eps-converted-to.pdf Graphic file (type pdf)
-<use image1-eps-converted-to.pdf>
-Package pdftex.def Info: image1-eps-converted-to.pdf  used on input line 352. o
-n input line 352.
-Package pdftex.def Info: Requested size: 241.84842pt x 53.7455pt on input line 
-352.
-Package epstopdf Info: Source file: <image3.eps>
-(epstopdf)                    date: 2018-10-22 10:41:12
-(epstopdf)                    size: 22611 bytes
-(epstopdf)             Output file: <image3-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-10-22 10:43:44
-(epstopdf)                    size: 3817 bytes
-(epstopdf)             Command: <epstopdf --outfile=image3-eps-converted-to.pdf
- image3.eps>
-(epstopdf)             \includegraphics on input line 359.
-Package epstopdf Info: Output file is already uptodate.
-<image3-eps-converted-to.pdf, id=37, pagebox=cropbox, 231.86626pt x 143.53625pt
->
-File: image3-eps-converted-to.pdf Graphic file (type pdf)
-<use image3-eps-converted-to.pdf>
-Package pdftex.def Info: image3-eps-converted-to.pdf  used on input line 359. o
-n input line 359.
-Package pdftex.def Info: Requested size: 113.81102pt x 70.45602pt on input line
- 359.
-Package epstopdf Info: Source file: <image4.eps>
-(epstopdf)                    date: 2018-10-22 10:41:13
-(epstopdf)                    size: 21590 bytes
-(epstopdf)             Output file: <image4-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-10-22 10:43:45
-(epstopdf)                    size: 3526 bytes
-(epstopdf)             Command: <epstopdf --outfile=image4-eps-converted-to.pdf
- image4.eps>
-(epstopdf)             \includegraphics on input line 366.
-Package epstopdf Info: Output file is already uptodate.
-<image4-eps-converted-to.pdf, id=38, pagebox=cropbox, 231.86626pt x 143.53625pt
->
-File: image4-eps-converted-to.pdf Graphic file (type pdf)
-<use image4-eps-converted-to.pdf>
-Package pdftex.def Info: image4-eps-converted-to.pdf  used on input line 366. o
-n input line 366.
-Package pdftex.def Info: Requested size: 113.81102pt x 70.45602pt on input line
- 366.
- [5 <./image1-eps-converted-to.pdf> <./image3-eps-converted-to.pdf> <./image4-e
-ps-converted-to.pdf>] (ICASSP19.bbl)
-[6
+e 178.
+ [3 <./FIG/autoencoder.png> <./FIG/model.png>]
+<FIG/NN.png, id=32, 1969.3575pt x 218.31563pt>
+File: FIG/NN.png Graphic file (type png)
+<use FIG/NN.png>
+Package pdftex.def Info: FIG/NN.png  used on input line 259. on input line 259.
 
-] (ICASSP19.aux) ) 
+Package pdftex.def Info: Requested size: 506.45905pt x 56.14111pt on input line
+ 259.
+ (ICASSP19.bbl) [4 <./FIG/loss.png>] [5 <./FIG/NN.png>]
+(ICASSP19.aux) ) 
 Here is how much of TeX's memory you used:
- 2316 strings out of 493312
- 31157 string characters out of 3138899
- 97236 words of memory out of 3000000
- 5799 multiletter control sequences out of 15000+200000
- 21403 words of font info for 54 fonts, out of 3000000 for 9000
+ 2292 strings out of 493312
+ 30661 string characters out of 3138899
+ 97160 words of memory out of 3000000
+ 5786 multiletter control sequences out of 15000+200000
+ 26665 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,25p,1320b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/
-utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ICASSP19.pdf (6 pages, 425446 bytes).
+ 41i,10n,25p,1320b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
+times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ICASSP19.pdf (5 pages, 430604 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

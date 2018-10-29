@@ -132,7 +132,7 @@ Second, the emotion production of human speech follows the opposite direction of
 
 Define $\mathcal{X}_i$ as the speech domain with emotion $i$. Given parallel data, we can draw sample pairs $(x_1, x_2)$ from the joint distribution $P(x_1, x_2)$, $x_1 \in \mathcal{X}_1, x_2 \in \mathcal{X}_2$. It is easy to learn the conditions $P(x_2|x_1), P(x_1|x_2)$. However, nonparallel data only give us the marginal distributions $P(x_1)$ and $P(x_2)$. Since estimating the joint distribution from marginal distribution is an ill-posed problem, additional conditions are required. We assume that the speech signal can be decomposed into a domain-invariant content code and a domain-dependent style code.
 
-Figure \ref{autoencoder} shows the generative model of speech with a partially shared latent space. A pair of corresponding speech $(x_1, x_2)$ is assumed to have a shared latent code $c \in \mathcal{C}$ and emotion-related style codes $s_1 \in \mathcal{S}_1, s_2 \in \mathcal{S}_2$. For any emotional speech $x_i$, we have a deterministic decoder $x_i = G_i(c_i,s_i)$ and its inverse encoders $c_i = E_i^c(x_i)$, $s_i = E_i^s(x_i)$. To convert emotion, we just recombine the content code of the source speech with the style code of the target emotion.
+Fig. \ref{autoencoder} shows the generative model of speech with a partially shared latent space. A pair of corresponding speech $(x_1, x_2)$ is assumed to have a shared latent code $c \in \mathcal{C}$ and emotion-related style codes $s_1 \in \mathcal{S}_1, s_2 \in \mathcal{S}_2$. For any emotional speech $x_i$, we have a deterministic decoder $x_i = G_i(c_i,s_i)$ and its inverse encoders $c_i = E_i^c(x_i)$, $s_i = E_i^s(x_i)$. To convert emotion, we just recombine the content code of the source speech with the style code of the target emotion.
 \begin{equation}
 \begin{aligned}
 x_{1\leftarrow2}' = G_1(c_2, s_1) = G_1(E_2^c(x_2), s_1) \\
@@ -150,11 +150,12 @@ It should be noted that the style code $s_i$ is not inferred from one utterance,
 
 \subsection{Model}
 % ignore the treasures in computer music before the age of deep learning.
-Traditional emotional speech analysis mainly works on four types of acoustic features: fundamental frequency ($F_0$), spectral sequence, time duration and energy envelope. It was found in [6] that only $F_0$ and spectral sequence have significant influence, while the other two require manual segmentation and have little impact on changing the emotions. Therefore we focus on learning the conversion model for $F_0$ and spectral sequence. Figure \ref{model} shows an overview of our nonparallel emotional speech conversion system. The acoustic features are extracted and recombined by WORLD analysis system [27] and converted separately.
+Traditional emotional speech analysis mainly works on four types of acoustic features: fundamental frequency ($F_0$), spectral sequence, time duration and energy envelope. It was found in [6] that only $F_0$ and spectral sequence have significant influence, while the other two require manual segmentation and have little impact on changing the emotions. Therefore we focus on learning the conversion model for $F_0$ and spectral sequence. Fig. \ref{model} shows an overview of our nonparallel emotional speech conversion system. The acoustic features are extracted and recombined by WORLD analysis system [27] and converted separately.
 
 We convert $F_0$ by linear transform to match statistics of the fundamental frequencies in the target emotion domain. The conversion is performed by logarithm Gaussian normalization
 \begin{equation}
 f_2 = \exp((\log f_1 - \mu_1)\cdot\frac{\sigma_2}{\sigma_1} + \mu_2)
+\label{eq:f0}
 \end{equation}
 where $\mu_i, \sigma_i$ are the mean and variance obtained from the target emotion set. Aperiodicity (AP) is mapped directly since it does not contain emotion-related information.
 
@@ -164,11 +165,11 @@ where $\mu_i, \sigma_i$ are the mean and variance obtained from the target emoti
 \label{model}
 \end{figure}
 
-For spectral sequence, we use low-dimensional representation in mel-cepstrum (MCEP) domain to reduce computation complexity. [28] shows that 50 MCEP coefficients are enough to synthesize full-band speech without quality degeneration. Spectra conversion is learnt by the autoencoder model in Figure \ref{autoencoder}. The encoders and decoders are implemented with gated convolutional neural networks [13]. In addition, two generative adversarial networks (GANs) were added to produce realistic spectral frames. Our model has 4 subnetworks $E^c, E^s, G, D$, in which $D$ is the discriminator in GANs to distinguish between real samples and machine-generated samples.
+For spectral sequence, we use low-dimensional representation in mel-cepstrum (MCEP) domain to reduce computation complexity. [28] shows that 50 MCEP coefficients are enough to synthesize full-band speech without quality degeneration. Spectra conversion is learnt by the autoencoder model in Fig. \ref{autoencoder}. The encoders and decoders are implemented with gated convolutional neural networks [13]. In addition, two generative adversarial networks (GANs) were added to produce realistic spectral frames. Our model has 4 subnetworks $E^c, E^s, G, D$, in which $D$ is the discriminator in GANs to distinguish between real samples and machine-generated samples.
 
 
 \subsection{Loss functions}
-We jointly train the encoders, decoders and GAN's discriminators with multiple losses displayed in Figure \ref{loss}. To keep encoder and decoder as inverse operations, we apply reconstruction loss in the direction $x_i \rightarrow (c_i, s_i) \rightarrow x_i'$. The spectral sequence should not change after encoding and decoding.
+We jointly train the encoders, decoders and GAN's discriminators with multiple losses displayed in Fig. \ref{loss}. To keep encoder and decoder as inverse operations, we apply reconstruction loss in the direction $x_i \rightarrow (c_i, s_i) \rightarrow x_i'$. The spectral sequence should not change after encoding and decoding.
 \begin{equation}
 L_{recon}^{x_i} = \mathbb{E}_{x_i}(\| x_i - x_i' \|_1), \quad x_i' = G_i(E_i^c(x_i), E_i^s(x_i))
 \end{equation}
@@ -204,7 +205,7 @@ The full loss is the weighted sum of $L_{recon}$, $L_{cycle}$, $L_{GAN}$.
 + \lambda_x (L_{recon}^1 + L_{recon}^2) + \lambda_g (L_{GAN}^1 + L_{GAN}^2) \qquad \quad
 \end{aligned}
 \end{equation}
-
+where $\lambda_s, \lambda_c, \lambda_x, \lambda_g$ control the weights of the components.
 %1. reconstruction loss: ensures the encoders and decoders are inverse functions
 %
 %2. cycle-consistency loss in the latent space
@@ -243,138 +244,43 @@ The full loss is the weighted sum of $L_{recon}$, $L_{cycle}$, $L_{GAN}$.
 
 \subsection{Corpus}
 We test the proposed method on IEMOCAP [17], which is a widely used corpus for emotion recognition. To our knowledge, this is the first work to use it for emotion conversion. IEMOCAP contains scripted and improvised
-dialogs in five sessions; each has labeled emotional sentences pronounced by two English speakers. The emotions in scripted dialogs have strong correlation with the lingual content. Since our task is to change emotion but keep the speaker identity and linguistic content, we only use the improvised dialogs of the same speaker. We train the conversion model on four emotions: angry, happy, neutral, sad. The acoustic features $F_0$, spectral sequence and AP are extracted every $5$ ms by WORLD [27], then coded to $24$-dimension Mel-cepstral vectors of flexible temporal size $128$ as the autoencoder's input.
+dialogs in five sessions; each has labeled emotional sentences pronounced by two English speakers. The emotions in scripted dialogs have strong correlation with the lingual content. Since our task is to change emotion but keep the speaker identity and linguistic content, we only use the improvised dialogs of the same speaker. We train the conversion model on four emotions: angry, happy, neutral, sad. The acoustic features $F_0$, spectral sequence and AP are extracted by WORLD [27] every $5$ ms, then coded to $24$-dimension Mel-cepstral vectors of temporal size $128$ as the autoencoder's input.
 
 %It has background noise, close to real applications. Collect data from YouTube
 
 
 \subsection{Network Architecture}
-The network structure is illustrated in Fig. ??. The encoders and decoders
+Our network structure is illustrated in Fig. \ref{fig:NN}. The encoders and decoders are implemented with one-dimension CNNs to capture the temporal dependencies; the GAN discriminators are implemented with two-dimension CNNs to capture the spectra-temporal patterns. All networks are equipped with gated linear units (GLU) as activation functions. The emotion style is learnt by a MLP with 3 linear layers and output channel-wise mean and variance $\mu(s), \sigma(s)$. Then they are fed into the decoder by adding an adaptive instance normalization (AdaIN) [28] layer before activation. This mechanism is similar to the conversion model of $F_0$ (Eq.\ref{eq:f0}).
+\begin{equation}
+\text{AdaIN}(c,s) = \sigma(s)\Big(\frac{c-\mu(c)}{\sigma(c)}\Big) + \mu(s)
+\end{equation}
+
+\begin{figure*}[t!]
+\includegraphics[width=1.0\textwidth]{FIG/NN}
+\caption{The network architecture of content encoder, style encoder, decoder, and GAN discriminator.}
+\label{fig:NN}
+\end{figure*}
 
 %It uses gated linear units (GLU) as activation function. The gating mechanism builds hierarchical representations of the input sequence. It takes $\mathcal{O}(N/k)$ operations to capture long-term dependencies of size $N$ (the kernel width is $k$), while recurrent networks need $\mathcal{O}(N)$ operations.
-
 %encoding and decoding networks have mirror structure
 
 
-\subsection{Results}
+\subsection{Objective evaluation}
 
 
-To achieve the best rendering both in printed proceedings and electronic proceedings, we
-strongly encourage you to use Times-Roman font.  In addition, this will give
-the proceedings a more uniform look.  Use a font that is no smaller than nine
-point type throughout the paper, including figure captions.
-
-In nine point type font, capital letters are 2 mm high.  {\bf If you use the
-smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch)
-vertically.}  This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make
-the paper much more readable.  Larger type sizes require correspondingly larger
-vertical spacing.  Please do not double-space your paper.  TrueType or
-Postscript Type 1 fonts are preferred.
-
-The first paragraph in each section should not be indented, but all the
-following paragraphs within the section should be indented as these paragraphs
-demonstrate.
-%\subsection{Emotional Speech Recognition}
+\subsection{Subjective evaluation}
+We conducted listening tests on Amazon MTurk to evaluate the converted speech \footnote{We provide converted samples at https://www.jian-gao.org/emovc}.
 
 
-\section{Conclusion and Future work}
+\section{Conclusion}
 \label{sec:con}
+We presented a nonparallel emotional speech conversion system. Objective and subjective evaluations showed that our model can successfully manipulate emotions to fool the emotion classifier as well as human listeners. As our approach does not require any paired data, transcripts or time alignment, it is easy to be applied in real-world situations. {\color{blue} One limitation is that the current model is restricted to one specific speaker.} Future work is to develop a general model that can do emotion conversion for unseen speakers. Additionally, we will build a larger database for training deep neural networks.
 
-Major headings, for example, "1. Introduction", should appear in all capital
-letters, bold face if possible, centered in the column, with one blank line
-before, and one blank line after. Use a period (".") after the heading number,
-not a colon.
+%We will continue to improve the speech quality.
 
-\subsection{Subheadings}
-\label{ssec:subhead}
-
-Subheadings should appear in lower case (initial word capitalized) in
-boldface.  They should start at the left margin on a separate line.
-
-\subsubsection{Sub-subheadings}
-\label{sssec:subsubhead}
-
-Sub-subheadings, as in this paragraph, are discouraged. However, if you
-must use them, they should appear in lower case (initial word
-capitalized) and start at the left margin on a separate line, with paragraph
-text beginning on the following line.  They should be in italics.
-
-\section{PRINTING YOUR PAPER}
-\label{sec:print}
-
-Print your properly formatted text on high-quality, 8.5 x 11-inch white printer
-paper. A4 paper is also acceptable, but please leave the extra 0.5 inch (12 mm)
-empty at the BOTTOM of the page and follow the top and left margins as
-specified.  If the last page of your paper is only partially filled, arrange
-the columns so that they are evenly balanced if possible, rather than having
-one long column.
-
-In LaTeX, to start a new column (but not a new page) and help balance the
-last-page column lengths, you can use the command ``$\backslash$pagebreak'' as
-demonstrated on this page (see the LaTeX source below).
-
-\section{PAGE NUMBERING}
-\label{sec:page}
-
-Please do {\bf not} paginate your paper.  Page numbers, session numbers, and
-conference identification will be inserted when the paper is included in the
-proceedings.
-
-\section{ILLUSTRATIONS, GRAPHS, AND PHOTOGRAPHS}
-\label{sec:illust}
-
-Illustrations must appear within the designated margins.  They may span the two
-columns.  If possible, position illustrations at the top of columns, rather
-than in the middle or at the bottom.  Caption and number every illustration.
-All halftone illustrations must be clear black and white prints.  Colors may be
-used, but they should be selected so as to be readable when printed on a
-black-only printer.
-
-Since there are many ways, often incompatible, of including images (e.g., with
-experimental results) in a LaTeX document, below is an example of how to do
-this \cite{Lamp86}.
-
-\section{FOOTNOTES}
-\label{sec:foot}
-
-Use footnotes sparingly (or not at all!) and place them at the bottom of the
-column on the page on which they are referenced. Use Times 9-point type,
-single-spaced. To help your readers, avoid using footnotes altogether and
-include necessary peripheral observations in the text (within parentheses, if
-you prefer, as in this sentence).
-
-% Below is an example of how to insert images. Delete the ``\vspace'' line,
-% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
-% with a suitable PostScript file name.
-% -------------------------------------------------------------------------
-\begin{figure}[htb]
-
-\begin{minipage}[b]{1.0\linewidth}
-  \centering
-  \centerline{\includegraphics[width=8.5cm]{image1}}
-%  \vspace{2.0cm}
-  \centerline{(a) Result 1}\medskip
-\end{minipage}
-%
-\begin{minipage}[b]{.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{image3}}
-%  \vspace{1.5cm}
-  \centerline{(b) Results 3}\medskip
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{image4}}
-%  \vspace{1.5cm}
-  \centerline{(c) Result 4}\medskip
-\end{minipage}
-%
-\caption{Example of placing a figure with experimental results.}
-\label{fig:res}
-%
-\end{figure}
-
+%Future work includes using speech labeled in dimensional emotion space and control the degree of emotion.
+%It is based on an autoencoder model where the speech signal is decomposed into an emotion-invariant content code and an emotion-dependent style code.
+%to build a larger database. improve speech quality, train on multi
 
 % To start a new column (but not a new page) and help balance the last-page
 % column length use \vfill\pagebreak.
@@ -382,56 +288,18 @@ you prefer, as in this sentence).
 %\vfill
 %\pagebreak
 
-\section{COPYRIGHT FORMS}
-\label{sec:copyright}
 
-You must submit your fully completed, signed IEEE electronic copyright release
-form when you submit your paper. We {\bf must} have this form before your paper
-can be published in the proceedings.
-
-\section{RELATION TO PRIOR WORK}
-\label{sec:prior}
-
-The text of the paper should contain discussions on how the paper's
-contributions are related to prior work in the field. It is important
-to put new work in  context, to give credit to foundational work, and
-to provide details associated with the previous work that have appeared
-in the literature. This discussion may be a separate, numbered section
-or it may appear elsewhere in the body of the manuscript, but it must
-be present.
-
-You should differentiate what is new and how your work expands on
-or takes a different path from the prior studies. An example might
-read something to the effect: "The work presented here has focused
-on the formulation of the ABC algorithm, which takes advantage of
-non-uniform time-frequency domain analysis of data. The work by
-Smith and Cohen \cite{Lamp86} considers only fixed time-domain analysis and
-the work by Jones et al \cite{C2} takes a different approach based on
-fixed frequency partitioning. While the present study is related
-to recent approaches in time-frequency analysis [3-5], it capitalizes
-on a new feature space, which was not considered in these earlier
-studies."
-
-\vfill\pagebreak
-
-\section{REFERENCES}
-\label{sec:refs}
-
-List and number all bibliographical references at the end of the
-paper. The references can be numbered in alphabetic order or in
-order of appearance in the document. When referring to them in
-the text, type the corresponding reference number in square
-brackets as shown at the end of this sentence \cite{C2}. An
-additional final page (the fifth page, in most cases) is
-allowed, but must contain only references to the prior
-literature.
-
-% References should be produced using the bibtex program from suitable
-% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
-% style file from IEEE produces unsorted bibliography list.
-% -------------------------------------------------------------------------
+%\section{REFERENCES}
+%\label{sec:refs}
+%
+% \cite{C2}
+%
+%% References should be produced using the bibtex program from suitable
+%% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
+%% style file from IEEE produces unsorted bibliography list.
+%% -------------------------------------------------------------------------
 \bibliographystyle{IEEEbib}
-\bibliography{strings,refs}
+\bibliography{refs}
 
 \end{document}
 
@@ -465,7 +333,7 @@ literature.
 %25. STARGAN-VC NON-PARALLEL MANY-TO-MANY VOICE CONVERSION
 %26. Huang, C., Akagi, M., 2008. A three-layered model for expressive speech perceptionh. Speech Commun. 50 (10), 810–828
 %27. M. Morise, F. Yokomori, and K. Ozawa, “WORLD: A vocoder-based high-quality speech synthesis system for real-time applications,” IEICE Trans. Inf. Syst., vol. 99, no. 7, pp. 1877–1884, 2016
-
+%28. Arbitrary style transfer in real-time with adaptive instance normalization. ICCV (2017)
 
 
 %xx. M. Arjovsky, S. Chintala, and L. Bottou, “Wasserstein generative adversarial networks,” in International Conference on Machine Learning, 2017, pp. 214–223
