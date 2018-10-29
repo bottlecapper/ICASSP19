@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.3)  29 OCT 2018 08:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.3)  29 OCT 2018 12:47
 entering extended mode
-**./ICASSP19.tex
-(ICASSP19.tex
+**./ICASSP2019.tex
+(ICASSP2019.tex
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -117,24 +117,23 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (ICASSP19.aux)
-\openout1 = `ICASSP19.aux'.
+) (ICASSP2019.aux)
+\openout1 = `ICASSP2019.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 47.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 49.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (C:\Users\bottl\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
@@ -203,83 +202,144 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
-LaTeX Font Info:    Try loading font information for U+msa on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 52.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 50.
+LaTeX Font Info:    Try loading font information for U+msb on input line 52.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 58.
- [1{C:/Users/bottl/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 60.
+
+Overfull \hbox (2.60147pt too wide) in paragraph at lines 60--62
+[]\OT1/ptm/b/it/10 Index Terms\OT1/ptm/b/n/10 --- \OT1/ptm/m/n/10 Speech Emo-ti
+on Con-ver-sion, Non-parallel
+ []
+
+[1{C:/Users/bottl/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
 ] [2]
-<FIG/autoencoder.png, id=20, 770.88pt x 484.05844pt>
+<FIG/autoencoder.png, id=19, 770.88pt x 484.05844pt>
 File: FIG/autoencoder.png Graphic file (type png)
 <use FIG/autoencoder.png>
-Package pdftex.def Info: FIG/autoencoder.png  used on input line 145. on input 
-line 145.
+Package pdftex.def Info: FIG/autoencoder.png  used on input line 134. on input 
+line 134.
 Package pdftex.def Info: Requested size: 243.09818pt x 152.6491pt on input line
- 145.
-<FIG/model.png, id=22, 718.18312pt x 465.99094pt>
+ 134.
+<FIG/model.png, id=21, 718.18312pt x 465.99094pt>
 File: FIG/model.png Graphic file (type png)
 <use FIG/model.png>
-Package pdftex.def Info: FIG/model.png  used on input line 163. on input line 1
-63.
+Package pdftex.def Info: FIG/model.png  used on input line 152. on input line 1
+52.
 Package pdftex.def Info: Requested size: 243.09818pt x 157.73088pt on input lin
-e 163.
-<FIG/loss.png, id=23, 909.3975pt x 578.16pt>
+e 152.
+<FIG/loss.png, id=22, 909.3975pt x 578.16pt>
 File: FIG/loss.png Graphic file (type png)
 <use FIG/loss.png>
-Package pdftex.def Info: FIG/loss.png  used on input line 178. on input line 17
-8.
+Package pdftex.def Info: FIG/loss.png  used on input line 167. on input line 16
+7.
 Package pdftex.def Info: Requested size: 243.09818pt x 154.55261pt on input lin
-e 178.
- [3 <./FIG/autoencoder.png> <./FIG/model.png>]
-<FIG/NN.png, id=32, 1969.3575pt x 218.31563pt>
+e 167.
+
+[3 <./FIG/autoencoder.png> <./FIG/model.png>]
+<FIG/NN.png, id=31, 1969.3575pt x 218.31563pt>
 File: FIG/NN.png Graphic file (type png)
 <use FIG/NN.png>
-Package pdftex.def Info: FIG/NN.png  used on input line 259. on input line 259.
+Package pdftex.def Info: FIG/NN.png  used on input line 213. on input line 213.
 
 Package pdftex.def Info: Requested size: 506.45905pt x 56.14111pt on input line
- 259.
- (ICASSP19.bbl) [4 <./FIG/loss.png>] [5 <./FIG/NN.png>]
-(ICASSP19.aux) ) 
+ 213.
+ (ICASSP2019.bbl [4 <./FIG/loss.png>]
+Underfull \hbox (badness 1748) in paragraph at lines 9--14
+\OT1/ptm/m/n/10 ``Ac-cent con-ver-sion us-ing pho-netic pos-te-ri-or-grams,''
+ []
+
+Missing character: There is no ‰ in font ptmr7t!
+Missing character: There is no ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no è in font ptmr7t!
+Missing character: There is no ∑ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no á in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no Á in font ptmr7t!
+Missing character: There is no ê in font ptmr7t!
+Missing character: There is no Ü in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ≠ in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no ‰ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ö in font ptmr7t!
+
+Underfull \hbox (badness 1221) in paragraph at lines 76--81
+[]\OT1/ptm/m/n/10 Carlos Busso, Mur-taza Bu-lut, Chi-Chun Lee, Abe
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 76--81
+\OT1/ptm/m/n/10 Chang, Sung-bok Lee, and Shrikanth S Narayanan,
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 90--95
+[]\OT1/ptm/m/n/10 Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu,
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 97--101
+[]\OT1/ptm/m/n/10 Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu,
+ []
+
+[5 <./FIG/NN.png>]
+Underfull \hbox (badness 4543) in paragraph at lines 121--126
+[]\OT1/ptm/m/n/10 A[]aron Van Den Oord, Sander Diele-man, Heiga
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 121--126
+\OT1/ptm/m/n/10 Nal Kalch-bren-ner, An-drew W Se-nior, and Ko-ray
+ []
+
+) [6
+
+] (ICASSP2019.aux) ) 
 Here is how much of TeX's memory you used:
- 2292 strings out of 493312
- 30661 string characters out of 3138899
- 97160 words of memory out of 3000000
- 5786 multiletter control sequences out of 15000+200000
+ 2316 strings out of 493312
+ 31105 string characters out of 3138899
+ 97286 words of memory out of 3000000
+ 5810 multiletter control sequences out of 15000+200000
  26665 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,25p,1320b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
-times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ICASSP19.pdf (5 pages, 430604 bytes).
+ 41i,10n,25p,1582b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ICASSP2019.pdf (6 pages, 446766 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

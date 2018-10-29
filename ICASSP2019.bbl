@@ -1,0 +1,159 @@
+\begin{thebibliography}{10}
+
+\bibitem{mohammadi2017overview}
+Seyed~Hamidreza Mohammadi and Alexander Kain,
+\newblock ``An overview of voice conversion systems,''
+\newblock {\em Speech Communication}, vol. 88, pp. 65--82, 2017.
+
+\bibitem{zhao2018accent}
+Guanlong Zhao, Sinem Sonsaat, John Levis, Evgeny Chukharev-Hudilainen, and
+  Ricardo Gutierrez-Osuna,
+\newblock ``Accent conversion using phonetic posteriorgrams,''
+\newblock in {\em 2018 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)}. IEEE, 2018, pp. 5314--5318.
+
+\bibitem{wang2012emotional}
+Miaomiao Wang, Miaomiao Wen, Keikichi Hirose, and Nobuaki Minematsu,
+\newblock ``Emotional voice conversion for mandarin using tone nucleus
+  model--small corpus and high efficiency,''
+\newblock in {\em Speech Prosody 2012}, 2012.
+
+\bibitem{li2012emotional}
+Bingjie Li, Zhongzhe Xiao, Yan Shen, Qiang Zhou, and Zhi Tao,
+\newblock ``Emotional speech conversion based on spectrum-prosody dual
+  transformation,''
+\newblock in {\em Signal Processing (ICSP), 2012 IEEE 11th International
+  Conference on}. IEEE, 2012, vol.~1, pp. 531--535.
+
+\bibitem{wang2014multi}
+Zexun Wang and Yibiao Yu,
+\newblock ``Multi-level prosody and spectrum conversion for emotional speech
+  synthesis,''
+\newblock in {\em Signal Processing (ICSP), 2014 12th International Conference
+  on}. IEEE, 2014, pp. 588--593.
+
+\bibitem{xue2018voice}
+Yawen Xue, Yasuhiro Hamada, and Masato Akagi,
+\newblock ``Voice conversion for emotional speech: Rule-based synthesis with
+  degree of emotion controllable in dimensional space,''
+\newblock {\em Speech Communication}, vol. 102, pp. 54--67, 2018.
+
+\bibitem{kawahara1999restructuring}
+Hideki Kawahara, Ikuyo Masuda-Katsuse, and Alain De~Cheveigne,
+\newblock ``Restructuring speech representations using a pitch-adaptive
+  time--frequency smoothing and an instantaneous-frequency-based f0 extraction:
+  Possible role of a repetitive structure in sounds1,''
+\newblock {\em Speech communication}, vol. 27, no. 3-4, pp. 187--207, 1999.
+
+\bibitem{fujisaki1984analysis}
+Hiroya Fujisaki and Keikichi Hirose,
+\newblock ``Analysis of voice fundamental frequency contours for declarative
+  sentences of japanese,''
+\newblock {\em Journal of the Acoustical Society of Japan (E)}, vol. 5, no. 4,
+  pp. 233--242, 1984.
+
+\bibitem{xue2016study}
+Yawen Xue and Masato Akagi,
+\newblock ``A study on applying target prediction model to parameterize power
+  envelope of emotional speech,''
+\newblock in {\em 2016 RISP International Workshop on Nonlinear Circuits,
+  Communications and Signal Processing (NCSP'16)}. 信号処理学会, 2016.
+
+\bibitem{gatys2016image}
+Leon~A Gatys, Alexander~S Ecker, and Matthias Bethge,
+\newblock ``Image style transfer using convolutional neural networks,''
+\newblock in {\em 2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}. IEEE, 2016, pp. 2414--2423.
+
+\bibitem{goodfellow2014generative}
+Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
+  Sherjil Ozair, Aaron Courville, and Yoshua Bengio,
+\newblock ``Generative adversarial nets,''
+\newblock in {\em Advances in neural information processing systems}, 2014, pp.
+  2672--2680.
+
+\bibitem{busso2008iemocap}
+Carlos Busso, Murtaza Bulut, Chi-Chun Lee, Abe Kazemzadeh, Emily Mower, Samuel
+  Kim, Jeannette~N Chang, Sungbok Lee, and Shrikanth~S Narayanan,
+\newblock ``Iemocap: Interactive emotional dyadic motion capture database,''
+\newblock {\em Language resources and evaluation}, vol. 42, no. 4, pp. 335,
+  2008.
+
+\bibitem{kawanami2003gmm}
+Hiromichi Kawanami, Yohei Iwami, Tomoki Toda, Hiroshi Saruwatari, and Kiyohiro
+  Shikano,
+\newblock ``Gmm-based voice conversion applied to emotional speech synthesis,''
+\newblock in {\em Eighth European Conference on Speech Communication and
+  Technology}, 2003.
+
+\bibitem{hsu2016voice}
+Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu, Yu~Tsao, and Hsin-Min Wang,
+\newblock ``Voice conversion from non-parallel corpora using variational
+  auto-encoder,''
+\newblock in {\em Signal and Information Processing Association Annual Summit
+  and Conference (APSIPA), 2016 Asia-Pacific}. IEEE, 2016, pp. 1--6.
+
+\bibitem{hsu2017voice}
+Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu, Yu~Tsao, and Hsin-Min Wang,
+\newblock ``Voice conversion from unaligned corpora using variational
+  autoencoding wasserstein generative adversarial networks,''
+\newblock {\em arXiv preprint arXiv:1704.00849}, 2017.
+
+\bibitem{fang2018high}
+Fuming Fang, Junichi Yamagishi, Isao Echizen, and Jaime Lorenzo-Trueba,
+\newblock ``High-quality nonparallel voice conversion based on cycle-consistent
+  adversarial network,''
+\newblock {\em arXiv preprint arXiv:1804.00425}, 2018.
+
+\bibitem{kaneko2017parallel}
+Takuhiro Kaneko and Hirokazu Kameoka,
+\newblock ``Parallel-data-free voice conversion using cycle-consistent
+  adversarial networks,''
+\newblock {\em arXiv preprint arXiv:1711.11293}, 2017.
+
+\bibitem{kameoka2018stargan}
+Hirokazu Kameoka, Takuhiro Kaneko, Kou Tanaka, and Nobukatsu Hojo,
+\newblock ``Stargan-vc: Non-parallel many-to-many voice conversion with star
+  generative adversarial networks,''
+\newblock {\em arXiv preprint arXiv:1806.02169}, 2018.
+
+\bibitem{van2016wavenet}
+A{\"a}ron Van Den~Oord, Sander Dieleman, Heiga Zen, Karen Simonyan, Oriol
+  Vinyals, Alex Graves, Nal Kalchbrenner, Andrew~W Senior, and Koray
+  Kavukcuoglu,
+\newblock ``Wavenet: A generative model for raw audio.,''
+\newblock in {\em SSW}, 2016, p. 125.
+
+\bibitem{huang2008three}
+Chun-Fang Huang and Masato Akagi,
+\newblock ``A three-layered model for expressive speech perception,''
+\newblock {\em Speech Communication}, vol. 50, no. 10, pp. 810--828, 2008.
+
+\bibitem{Zhu_2017_ICCV}
+Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei~A. Efros,
+\newblock ``Unpaired image-to-image translation using cycle-consistent
+  adversarial networks,''
+\newblock in {\em The IEEE International Conference on Computer Vision (ICCV)},
+  Oct 2017.
+
+\bibitem{morise2016world}
+Masanori Morise, Fumiya Yokomori, and Kenji Ozawa,
+\newblock ``World: a vocoder-based high-quality speech synthesis system for
+  real-time applications,''
+\newblock {\em IEICE TRANSACTIONS on Information and Systems}, vol. 99, no. 7,
+  pp. 1877--1884, 2016.
+
+\bibitem{dauphin2017language}
+Yann~N Dauphin, Angela Fan, Michael Auli, and David Grangier,
+\newblock ``Language modeling with gated convolutional networks,''
+\newblock in {\em International Conference on Machine Learning}, 2017, pp.
+  933--941.
+
+\bibitem{mirsamadi2017automatic}
+Seyedmahdad Mirsamadi, Emad Barsoum, and Cha Zhang,
+\newblock ``Automatic speech emotion recognition using recurrent neural
+  networks with local attention,''
+\newblock in {\em Acoustics, Speech and Signal Processing (ICASSP), 2017 IEEE
+  International Conference on}. IEEE, 2017, pp. 2227--2231.
+
+\end{thebibliography}
