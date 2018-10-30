@@ -18,13 +18,6 @@ Miaomiao Wang, Miaomiao Wen, Keikichi Hirose, and Nobuaki Minematsu,
   model--small corpus and high efficiency,''
 \newblock in {\em Speech Prosody 2012}, 2012.
 
-\bibitem{li2012emotional}
-Bingjie Li, Zhongzhe Xiao, Yan Shen, Qiang Zhou, and Zhi Tao,
-\newblock ``Emotional speech conversion based on spectrum-prosody dual
-  transformation,''
-\newblock in {\em Signal Processing (ICSP), 2012 IEEE 11th International
-  Conference on}. IEEE, 2012, vol.~1, pp. 531--535.
-
 \bibitem{wang2014multi}
 Zexun Wang and Yibiao Yu,
 \newblock ``Multi-level prosody and spectrum conversion for emotional speech
@@ -86,13 +79,6 @@ Hiromichi Kawanami, Yohei Iwami, Tomoki Toda, Hiroshi Saruwatari, and Kiyohiro
 \newblock in {\em Eighth European Conference on Speech Communication and
   Technology}, 2003.
 
-\bibitem{hsu2016voice}
-Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu, Yu~Tsao, and Hsin-Min Wang,
-\newblock ``Voice conversion from non-parallel corpora using variational
-  auto-encoder,''
-\newblock in {\em Signal and Information Processing Association Annual Summit
-  and Conference (APSIPA), 2016 Asia-Pacific}. IEEE, 2016, pp. 1--6.
-
 \bibitem{hsu2017voice}
 Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu, Yu~Tsao, and Hsin-Min Wang,
 \newblock ``Voice conversion from unaligned corpora using variational
@@ -104,18 +90,6 @@ Fuming Fang, Junichi Yamagishi, Isao Echizen, and Jaime Lorenzo-Trueba,
 \newblock ``High-quality nonparallel voice conversion based on cycle-consistent
   adversarial network,''
 \newblock {\em arXiv preprint arXiv:1804.00425}, 2018.
-
-\bibitem{kaneko2017parallel}
-Takuhiro Kaneko and Hirokazu Kameoka,
-\newblock ``Parallel-data-free voice conversion using cycle-consistent
-  adversarial networks,''
-\newblock {\em arXiv preprint arXiv:1711.11293}, 2017.
-
-\bibitem{kameoka2018stargan}
-Hirokazu Kameoka, Takuhiro Kaneko, Kou Tanaka, and Nobukatsu Hojo,
-\newblock ``Stargan-vc: Non-parallel many-to-many voice conversion with star
-  generative adversarial networks,''
-\newblock {\em arXiv preprint arXiv:1806.02169}, 2018.
 
 \bibitem{van2016wavenet}
 A{\"a}ron Van Den~Oord, Sander Dieleman, Heiga Zen, Karen Simonyan, Oriol
