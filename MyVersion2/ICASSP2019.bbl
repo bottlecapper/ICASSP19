@@ -1,120 +1,133 @@
 \begin{thebibliography}{10}
 
 \bibitem{mohammadi2017overview}
-S.H. Mohammadi and A.~Kain,
+Seyed~Hamidreza Mohammadi and Alexander Kain,
 \newblock ``An overview of voice conversion systems,''
 \newblock {\em Speech Communication}, vol. 88, pp. 65--82, 2017.
 
 \bibitem{zhao2018accent}
-G.~Zhao, S.~Sonsaat, J.~Levis, E.~Chukharev-Hudilainen, and R.~Gutierrez-Osuna,
+Guanlong Zhao, Sinem Sonsaat, John Levis, Evgeny Chukharev-Hudilainen, and
+  Ricardo Gutierrez-Osuna,
 \newblock ``Accent conversion using phonetic posteriorgrams,''
-\newblock in {\em ICASSP}. IEEE, 2018, pp. 5314--5318.
+\newblock in {\em 2018 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)}. IEEE, 2018, pp. 5314--5318.
 
 \bibitem{wang2012emotional}
-M.~Wang, M.~Wen, K.~Hirose, and N.~Minematsu,
+Miaomiao Wang, Miaomiao Wen, Keikichi Hirose, and Nobuaki Minematsu,
 \newblock ``Emotional voice conversion for mandarin using tone nucleus
   model--small corpus and high efficiency,''
 \newblock in {\em Speech Prosody 2012}, 2012.
 
 \bibitem{wang2014multi}
-Z.~Wang and Y.~Yu,
+Zexun Wang and Yibiao Yu,
 \newblock ``Multi-level prosody and spectrum conversion for emotional speech
   synthesis,''
-\newblock in {\em Signal Processing (ICSP)}. IEEE, 2014, pp. 588--593.
+\newblock in {\em Signal Processing (ICSP), 2014 12th International Conference
+  on}. IEEE, 2014, pp. 588--593.
 
 \bibitem{xue2018voice}
-Y.~Xue, Y.~Hamada, and M.~Akagi,
+Yawen Xue, Yasuhiro Hamada, and Masato Akagi,
 \newblock ``Voice conversion for emotional speech: Rule-based synthesis with
   degree of emotion controllable in dimensional space,''
 \newblock {\em Speech Communication}, vol. 102, pp. 54--67, 2018.
 
 \bibitem{kawahara1999restructuring}
-H.~Kawahara, I.~Masuda-Katsuse, and A.~De~Cheveigne,
+Hideki Kawahara, Ikuyo Masuda-Katsuse, and Alain De~Cheveigne,
 \newblock ``Restructuring speech representations using a pitch-adaptive
   time--frequency smoothing and an instantaneous-frequency-based f0 extraction:
   Possible role of a repetitive structure in sounds1,''
 \newblock {\em Speech communication}, vol. 27, no. 3-4, pp. 187--207, 1999.
 
 \bibitem{fujisaki1984analysis}
-H.~Fujisaki and K.~Hirose,
+Hiroya Fujisaki and Keikichi Hirose,
 \newblock ``Analysis of voice fundamental frequency contours for declarative
   sentences of japanese,''
-\newblock {\em ASJs Japan (E)}, vol. 5, no. 4, pp. 233--242, 1984.
+\newblock {\em Journal of the Acoustical Society of Japan (E)}, vol. 5, no. 4,
+  pp. 233--242, 1984.
 
 \bibitem{xue2016study}
-Y.~Xue and M.~Akagi,
+Yawen Xue and Masato Akagi,
 \newblock ``A study on applying target prediction model to parameterize power
   envelope of emotional speech,''
-\newblock in {\em RISP workshop NCSP'16}. 信号処理学会, 2016.
+\newblock in {\em 2016 RISP International Workshop on Nonlinear Circuits,
+  Communications and Signal Processing (NCSP'16)}. 信号処理学会, 2016.
 
 \bibitem{gatys2016image}
-L.A. Gatys, A.S. Ecker, and M.~Bethge,
+Leon~A Gatys, Alexander~S Ecker, and Matthias Bethge,
 \newblock ``Image style transfer using convolutional neural networks,''
-\newblock in {\em CVPR}. IEEE, 2016, pp. 2414--2423.
+\newblock in {\em 2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}. IEEE, 2016, pp. 2414--2423.
 
 \bibitem{goodfellow2014generative}
-I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
-  A.~Courville, and Y.~Bengio,
+Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
+  Sherjil Ozair, Aaron Courville, and Yoshua Bengio,
 \newblock ``Generative adversarial nets,''
-\newblock in {\em NIPS}, 2014, pp. 2672--2680.
+\newblock in {\em Advances in neural information processing systems}, 2014, pp.
+  2672--2680.
 
 \bibitem{busso2008iemocap}
-C.~Busso, M.~Bulut, CC~Lee, A.~Kazemzadeh, E.~Mower, S.~Kim, J.N. Chang,
-  S.~Lee, and S.S. Narayanan,
+Carlos Busso, Murtaza Bulut, Chi-Chun Lee, Abe Kazemzadeh, Emily Mower, Samuel
+  Kim, Jeannette~N Chang, Sungbok Lee, and Shrikanth~S Narayanan,
 \newblock ``Iemocap: Interactive emotional dyadic motion capture database,''
 \newblock {\em Language resources and evaluation}, vol. 42, no. 4, pp. 335,
   2008.
 
 \bibitem{kawanami2003gmm}
-H.~Kawanami, Y.~Iwami, T.~Toda, H.~Saruwatari, and K.~Shikano,
+Hiromichi Kawanami, Yohei Iwami, Tomoki Toda, Hiroshi Saruwatari, and Kiyohiro
+  Shikano,
 \newblock ``Gmm-based voice conversion applied to emotional speech synthesis,''
-\newblock in {\em Eurospeech}, 2003.
+\newblock in {\em Eighth European Conference on Speech Communication and
+  Technology}, 2003.
 
 \bibitem{hsu2017voice}
-CC~Hsu, HT~Hwang, YC~Wu, Y.~Tsao, and HM~Wang,
+Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu, Yu~Tsao, and Hsin-Min Wang,
 \newblock ``Voice conversion from unaligned corpora using variational
   autoencoding wasserstein generative adversarial networks,''
 \newblock {\em arXiv preprint arXiv:1704.00849}, 2017.
 
 \bibitem{fang2018high}
-F.~Fang, J.~Yamagishi, I.~Echizen, and J.~Lorenzo-Trueba,
+Fuming Fang, Junichi Yamagishi, Isao Echizen, and Jaime Lorenzo-Trueba,
 \newblock ``High-quality nonparallel voice conversion based on cycle-consistent
   adversarial network,''
 \newblock {\em arXiv preprint arXiv:1804.00425}, 2018.
 
 \bibitem{van2016wavenet}
-A.~Van Den~Oord, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves,
-  N.~Kalchbrenner, A.W. Senior, and K.~Kavukcuoglu,
+A{\"a}ron Van Den~Oord, Sander Dieleman, Heiga Zen, Karen Simonyan, Oriol
+  Vinyals, Alex Graves, Nal Kalchbrenner, Andrew~W Senior, and Koray
+  Kavukcuoglu,
 \newblock ``Wavenet: A generative model for raw audio.,''
 \newblock in {\em SSW}, 2016, p. 125.
 
 \bibitem{huang2008three}
-CF~Huang and M.~Akagi,
+Chun-Fang Huang and Masato Akagi,
 \newblock ``A three-layered model for expressive speech perception,''
 \newblock {\em Speech Communication}, vol. 50, no. 10, pp. 810--828, 2008.
 
 \bibitem{Zhu_2017_ICCV}
-JY~Zhu, T.~Park, P.~Isola, and A.A. Efros,
+Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei~A. Efros,
 \newblock ``Unpaired image-to-image translation using cycle-consistent
   adversarial networks,''
-\newblock in {\em IEEE ICCV}, Oct 2017.
+\newblock in {\em The IEEE International Conference on Computer Vision (ICCV)},
+  Oct 2017.
 
 \bibitem{morise2016world}
-M.~Morise, F.~Yokomori, and K.~Ozawa,
+Masanori Morise, Fumiya Yokomori, and Kenji Ozawa,
 \newblock ``World: a vocoder-based high-quality speech synthesis system for
   real-time applications,''
-\newblock {\em IEICE Trans. on Information and Systems}, vol. 99, no. 7, pp.
-  1877--1884, 2016.
+\newblock {\em IEICE TRANSACTIONS on Information and Systems}, vol. 99, no. 7,
+  pp. 1877--1884, 2016.
 
 \bibitem{dauphin2017language}
-Y.N. Dauphin, A.~Fan, M.~Auli, and D.~Grangier,
+Yann~N Dauphin, Angela Fan, Michael Auli, and David Grangier,
 \newblock ``Language modeling with gated convolutional networks,''
-\newblock in {\em ICML}, 2017, pp. 933--941.
+\newblock in {\em International Conference on Machine Learning}, 2017, pp.
+  933--941.
 
 \bibitem{mirsamadi2017automatic}
-S.~Mirsamadi, E.~Barsoum, and C.~Zhang,
+Seyedmahdad Mirsamadi, Emad Barsoum, and Cha Zhang,
 \newblock ``Automatic speech emotion recognition using recurrent neural
   networks with local attention,''
-\newblock in {\em ICASSP}. IEEE, 2017, pp. 2227--2231.
+\newblock in {\em Acoustics, Speech and Signal Processing (ICASSP), 2017 IEEE
+  International Conference on}. IEEE, 2017, pp. 2227--2231.
 
 \end{thebibliography}

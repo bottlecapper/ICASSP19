@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  31 OCT 2018 04:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  30 OCT 2018 06:54
 entering extended mode
 **./ICASSP2019.tex
 (ICASSP2019.tex
@@ -282,20 +282,15 @@ Package pdftex.def Info: FIG/NN.png used on input line 214.
 File: FIG/MOS.png Graphic file (type png)
  <use FIG/MOS.png>
 Package pdftex.def Info: FIG/MOS.png used on input line 245.
-(pdftex.def)             Requested size: 202.58052pt x 54.07932pt.
+(pdftex.def)             Requested size: 227.90501pt x 60.8371pt.
 
 Overfull \hbox (8.54898pt too wide) in paragraph at lines 322--340
 [][]
  []
 
-(ICASSP2019.bbl [4 <./FIG/NN.png> <./FIG/MOS.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
-\OT1/ptm/m/n/10 ``Re-struc-tur-ing speech rep-re-sen-ta-tions us-ing a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
-\OT1/ptm/m/n/10 pitch-adaptive time--frequency smooth-ing and an
+[4 <./FIG/NN.png> <./FIG/MOS.png>] (ICASSP2019.bbl
+Underfull \hbox (badness 1748) in paragraph at lines 9--14
+\OT1/ptm/m/n/10 ``Ac-cent con-ver-sion us-ing pho-netic pos-te-ri-or-grams,''
  []
 
 Missing character: There is no ä in font ptmr7t!
@@ -317,16 +312,36 @@ Missing character: There is no ä in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no š in font ptmr7t!
 
-Underfull \hbox (badness 3657) in paragraph at lines 62--67
-[]\OT1/ptm/m/n/10 C. Busso, M. Bu-lut, CC Lee, A. Kazemzadeh,
+Underfull \hbox (badness 1221) in paragraph at lines 69--74
+[]\OT1/ptm/m/n/10 Carlos Busso, Mur-taza Bu-lut, Chi-Chun Lee, Abe
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 69--74
+\OT1/ptm/m/n/10 Chang, Sung-bok Lee, and Shrikanth S Narayanan,
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 83--87
+[]\OT1/ptm/m/n/10 Chin-Cheng Hsu, Hsin-Te Hwang, Yi-Chiao Wu,
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 95--100
+[]\OT1/ptm/m/n/10 A[]aron Van Den Oord, Sander Diele-man, Heiga
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 95--100
+\OT1/ptm/m/n/10 Nal Kalch-bren-ner, An-drew W Se-nior, and Ko-ray
  []
 
 ) [5] (ICASSP2019.aux) ) 
 Here is how much of TeX's memory you used:
- 2461 strings out of 493323
- 32829 string characters out of 3139066
- 103209 words of memory out of 3000000
- 5939 multiletter control sequences out of 15000+200000
+ 2462 strings out of 493323
+ 32837 string characters out of 3139066
+ 103164 words of memory out of 3000000
+ 5940 multiletter control sequences out of 15000+200000
  26665 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,10n,25p,1277b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -345,7 +360,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ICASSP2019.pdf (5 pages, 464941 bytes).
+Output written on ICASSP2019.pdf (5 pages, 465153 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

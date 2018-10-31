@@ -8,7 +8,7 @@
 
 \usepackage{tabularx}
 %\usepackage{caption}
-%\captionsetup[table]{skip=-5pt}
+%\captionsetup[table]{skip=2pt}
 
 % Example definitions.
 % --------------------
@@ -17,7 +17,7 @@
 
 % Title.
 % ------
-\title{Nonparallel Emotional Speech Conversion using Style Transfer}
+\title{Nonparallel Emotional Speech Conversion}
 %
 % Single address.
 % ---------------
@@ -44,7 +44,7 @@
 %	Address C-D}
 %
 
-\name{Jian Gao $^{\star}$ \qquad Deep Chakraborty $^{\dagger}$ \qquad Olaitan Olaleye $^{\ddagger}$ \qquad Hamidou Tembine $^{\star}$}
+\name{Jian Gao $^{\star}$ \qquad Deep Chakraborty $^{\dagger}$ \qquad Olaitan Olaleye $^{\ddagger}$}
 \address{$^{\star}$ Department of Computer Science and Engineering, New York University, USA \\ $^{\dagger}$ College of Information and Computer Sciences, University of Massachusetts Amherst, USA \\ $^{\ddagger}$ Signify (formerly Philips Lighting) Research, North America, USA \\
 %{\small \tt jg4631@nyu.edu, dchakraborty@cs.umass.edu, olaitan.olaleye@signify.com}
 }
@@ -234,7 +234,7 @@ We use Adam optimizer and set $\beta_1=0.5$. The learning rate is initialized as
 \subsection{Results}
 The results were evaluated on three matrices: voice quality, emotion correctness, and the ability to keep speaker identity.
 
-\noindent \textbf{Subjective evaluation \ } We conducted listening tests on Amazon MTurk to evaluate the converted speech \footnote{We provide converted samples at https://www.jian-gao.org/emovc}. Each example was listened by $5$ random evaluators. They were asked to manually classify the emotion, and give $1$-to-$5$ opinion scores on voice quality and the similarity with the original speaker. The mean opinion score (MOS) of the latter two metrics were listed in Fig. \ref{fig:mos}. For subjective emotion classification, we found results consistent with the objective evaluations, therefore omitted for space constraints.
+\noindent \textbf{Subjective evaluation \ } We conducted listening tests on Amazon MTurk to evaluate the converted speech \footnote{We provide converted samples at https://www.jian-gao.org/emovc}. Each example was listened by $5$ random evaluators. They were asked to manually classify the emotion, and give $1$-to-$5$ opinion scores on voice quality and the similarity with the original speaker. The mean opinion score (MOS) of the latter two metrics were listed in Fig. \ref{fig:mos}. For emotion classification, we found results consistent with the objective evaluations, therefore omitted for space constraints.
 
 %we found consistent results with the subjective evaluations.
 
@@ -242,7 +242,7 @@ The results were evaluated on three matrices: voice quality, emotion correctness
 
 \begin{figure}[htb]
 \center
-\includegraphics[width=0.4\textwidth]{FIG/MOS}
+\includegraphics[width=0.45\textwidth]{FIG/MOS}
 \caption{MOS for voice quality and speaker similarity}
 \label{fig:mos}
 \end{figure}
@@ -289,7 +289,7 @@ The results were evaluated on three matrices: voice quality, emotion correctness
 %\end{table}
 
 
-\noindent \textbf{Objective evaluation \ } We applied a state-of-the-art speech emotion classifier \cite{mirsamadi2017automatic} for objective evaluation. The results listed in Table \ref{tab:emo} show that our model can effectively increase the percentage of desired emotions. Note that neutral and sad speech often get mixed up even by humans.
+\noindent \textbf{Objective evaluation \ } In addition, we applied a state-of-the-art speech emotion classifier \cite{mirsamadi2017automatic} for objective evaluation. The results listed in Table \ref{tab:emo} show that our model can effectively increase the percentage of desired emotions. Note that neutral and sad speech often get mixed up even by humans.
 
 %{\color{blue} Overlap between neu and sad. }
 
@@ -365,15 +365,7 @@ hap2ang       & \textbf{12(63)}      & \textbf{65(16)}    & 12(22)    & 12(0)   
 
 \section{Conclusion and Future work}
 \label{sec:con}
-We presented a nonparallel emotional speech conversion system. Objective and subjective evaluations showed that our model can successfully manipulate emotions to fool the emotion classifier as well as human listeners. As our approach does not require any paired data, transcripts or time alignment, it is easy to be applied in real-world situations. To our knowledge, this is the first work for nonparallel emotion conversion using style transfer. Future work is to develop a multi-domain emotion conversion model for unseen speakers.
-
-%Future work is to develop a unified general model for multi-domain emotion conversion for unseen speakers.
-
-\textbf{Acknowledgements}: This research was supported by U.S. Air Force under grant number FA9550-17-1-0259.
-
-\vfill
-
-
+We presented a nonparallel emotional speech conversion system. Objective and subjective evaluations showed that our model can successfully manipulate emotions to fool the emotion classifier as well as human listeners. As our approach does not require any paired data, transcripts or time alignment, it is easy to be applied in real-world situations. To our knowledge, this is the first work for nonparallel emotion conversion using style transfer technique. Future work is to develop a unified general model that can do multi-domain emotion conversion for unseen speakers.
 
 %{\color{blue} One limitation is that the current model is restricted to one specific speaker.}
 
@@ -382,7 +374,7 @@ We presented a nonparallel emotional speech conversion system. Objective and sub
 %$c_{1\leftarrow2}', s_{1\leftarrow2}', c_{2\leftarrow1}', s_{2\leftarrow1}'$ \\
 %$x_{2\leftarrow1}', x_{1\leftarrow2}', x_{2\leftarrow1}'', x_{1\leftarrow2}''$ \\
 %$x_{1\leftarrow2\leftarrow1}'', x_{2\leftarrow1\leftarrow2}''$
-
+\newpage
 
 % References should be produced using the bibtex program from suitable
 % BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
