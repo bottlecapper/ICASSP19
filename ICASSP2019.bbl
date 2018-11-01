@@ -52,6 +52,12 @@ L.A. Gatys, A.S. Ecker, and M.~Bethge,
 \newblock ``Image style transfer using convolutional neural networks,''
 \newblock in {\em CVPR}. IEEE, 2016, pp. 2414--2423.
 
+\bibitem{Huang_2018_ECCV}
+X.~Huang, MY. Liu, S.~Belongie, and J.~Kautz,
+\newblock ``Multimodal unsupervised image-to-image translation,''
+\newblock in {\em The European Conference on Computer Vision (ECCV)}, September
+  2018.
+
 \bibitem{goodfellow2014generative}
 I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
   A.~Courville, and Y.~Bengio,
@@ -70,11 +76,23 @@ H.~Kawanami, Y.~Iwami, T.~Toda, H.~Saruwatari, and K.~Shikano,
 \newblock ``Gmm-based voice conversion applied to emotional speech synthesis,''
 \newblock in {\em Eurospeech}, 2003.
 
-\bibitem{hsu2017voice}
-CC~Hsu, HT~Hwang, YC~Wu, Y.~Tsao, and HM~Wang,
+\bibitem{NIPS2017_6672}
+M.Y. Liu, T.~Breuel, and J.~Kautz,
+\newblock ``Unsupervised image-to-image translation networks,''
+\newblock in {\em Advances in Neural Information Processing Systems (NIPS)},
+  pp. 700--708. Curran Associates, Inc., 2017.
+
+\bibitem{Hsu2017}
+C.-C. Hsu, H.-T. Hwang, Y.-C. Wu, Y.~Tsao, and H.-M. Wang,
 \newblock ``Voice conversion from unaligned corpora using variational
   autoencoding wasserstein generative adversarial networks,''
-\newblock {\em arXiv preprint arXiv:1704.00849}, 2017.
+\newblock in {\em Proc. Interspeech 2017}, 2017, pp. 3364--3368.
+
+\bibitem{Kaneko2017}
+Takuhiro Kaneko, Hirokazu Kameoka, Kaoru Hiramatsu, and Kunio Kashino,
+\newblock ``Sequence-to-sequence voice conversion with similarity metric
+  learned using generative adversarial networks,''
+\newblock in {\em Proc. Interspeech 2017}, 2017, pp. 1283--1287.
 
 \bibitem{fang2018high}
 F.~Fang, J.~Yamagishi, I.~Echizen, and J.~Lorenzo-Trueba,
@@ -87,6 +105,11 @@ A.~Van Den~Oord, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves,
   N.~Kalchbrenner, A.W. Senior, and K.~Kavukcuoglu,
 \newblock ``Wavenet: A generative model for raw audio.,''
 \newblock in {\em SSW}, 2016, p. 125.
+
+\bibitem{tamamori2017speaker}
+A.~Tamamori, T.~Hayashi, K.~Kobayashi, K.~Takeda, and T.~Toda,
+\newblock ``Speaker-dependent wavenet vocoder,''
+\newblock in {\em Proc. Interspeech}, 2017, vol. 2017, pp. 1118--1122.
 
 \bibitem{huang2008three}
 CF~Huang and M.~Akagi,

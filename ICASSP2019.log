@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  31 OCT 2018 04:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  31 OCT 2018 07:08
 entering extended mode
 **./ICASSP2019.tex
 (ICASSP2019.tex
@@ -317,16 +317,16 @@ Missing character: There is no ä in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no š in font ptmr7t!
 
-Underfull \hbox (badness 3657) in paragraph at lines 62--67
+Underfull \hbox (badness 3657) in paragraph at lines 68--73
 []\OT1/ptm/m/n/10 C. Busso, M. Bu-lut, CC Lee, A. Kazemzadeh,
  []
 
 ) [5] (ICASSP2019.aux) ) 
 Here is how much of TeX's memory you used:
- 2461 strings out of 493323
- 32829 string characters out of 3139066
- 103209 words of memory out of 3000000
- 5939 multiletter control sequences out of 15000+200000
+ 2465 strings out of 493323
+ 32889 string characters out of 3139066
+ 103225 words of memory out of 3000000
+ 5943 multiletter control sequences out of 15000+200000
  26665 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,10n,25p,1277b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -345,7 +345,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ICASSP2019.pdf (5 pages, 464941 bytes).
+Output written on ICASSP2019.pdf (5 pages, 465499 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
