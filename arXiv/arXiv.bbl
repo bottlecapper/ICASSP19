@@ -106,6 +106,11 @@ A.~Van Den~Oord, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves,
 \newblock ``Wavenet: A generative model for raw audio.,''
 \newblock in {\em SSW}, 2016, p. 125.
 
+\bibitem{tamamori2017speaker}
+A.~Tamamori, T.~Hayashi, K.~Kobayashi, K.~Takeda, and T.~Toda,
+\newblock ``Speaker-dependent wavenet vocoder,''
+\newblock in {\em Proc. Interspeech}, 2017, vol. 2017, pp. 1118--1122.
+
 \bibitem{huang2008three}
 CF~Huang and M.~Akagi,
 \newblock ``A three-layered model for expressive speech perception,''
@@ -128,11 +133,6 @@ M.~Morise, F.~Yokomori, and K.~Ozawa,
 Y.N. Dauphin, A.~Fan, M.~Auli, and D.~Grangier,
 \newblock ``Language modeling with gated convolutional networks,''
 \newblock in {\em ICML}, 2017, pp. 933--941.
-
-\bibitem{DBLP:journals/corr/Jian18}
-Jian Gao, Deep Chakraborty, Hamidou Tembine, and Olaitan Olaleye,
-\newblock ``Nonparallel emotional speech conversion,''
-\newblock {\em CoRR}, vol. abs/1811.01174, 2018.
 
 \bibitem{mirsamadi2017automatic}
 S.~Mirsamadi, E.~Barsoum, and C.~Zhang,

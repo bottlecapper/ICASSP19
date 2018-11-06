@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  6 NOV 2018 06:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  3 NOV 2018 01:26
 entering extended mode
-**./ICASSP2019.tex
-(ICASSP2019.tex
+**./arXiv.tex
+(arXiv.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -144,8 +144,8 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \TX@delta=\dimen120
 \TX@cols=\count100
 \TX@ftn=\toks21
-) (ICASSP2019.aux)
-\openout1 = `ICASSP2019.aux'.
+) (arXiv.aux)
+\openout1 = `arXiv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
@@ -237,14 +237,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 
-Underfull \hbox (badness 1701) in paragraph at lines 59--61
+Underfull \hbox (badness 1701) in paragraph at lines 59--60
 \OT1/ptm/m/n/10 We pro-pose a non-par-al-lel data-driven emo-tional speech
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 64.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 63.
 
-Underfull \hbox (badness 1057) in paragraph at lines 64--66
+Underfull \hbox (badness 1057) in paragraph at lines 63--65
 []\OT1/ptm/b/it/10 Index Terms\OT1/ptm/b/n/10 --- \OT1/ptm/m/n/10 Emo-tional Sp
 eech Con-ver-sion, Non-
  []
@@ -257,13 +257,13 @@ eech Con-ver-sion, Non-
 <FIG/autoencoder.png, id=16, 770.88pt x 484.05844pt>
 File: FIG/autoencoder.png Graphic file (type png)
  <use FIG/autoencoder.png>
-Package pdftex.def Info: FIG/autoencoder.png used on input line 156.
+Package pdftex.def Info: FIG/autoencoder.png used on input line 131.
 (pdftex.def)             Requested size: 202.58052pt x 127.20387pt.
 
 [2] <FIG/model.png, id=22, 718.18312pt x 465.99094pt>
 File: FIG/model.png Graphic file (type png)
  <use FIG/model.png>
-Package pdftex.def Info: FIG/model.png used on input line 173.
+Package pdftex.def Info: FIG/model.png used on input line 146.
 (pdftex.def)             Requested size: 202.58052pt x 131.44359pt.
 
 Underfull \vbox (badness 1354) has occurred while \output is active []
@@ -272,22 +272,22 @@ Underfull \vbox (badness 1354) has occurred while \output is active []
 <FIG/loss.png, id=23, 909.3975pt x 578.16pt>
 File: FIG/loss.png Graphic file (type png)
  <use FIG/loss.png>
-Package pdftex.def Info: FIG/loss.png used on input line 188.
+Package pdftex.def Info: FIG/loss.png used on input line 161.
 (pdftex.def)             Requested size: 243.09818pt x 154.55261pt.
 
 <FIG/NN.png, id=24, 1969.3575pt x 218.31563pt>
 File: FIG/NN.png Graphic file (type png)
  <use FIG/NN.png>
-Package pdftex.def Info: FIG/NN.png used on input line 215.
+Package pdftex.def Info: FIG/NN.png used on input line 188.
 (pdftex.def)             Requested size: 506.45905pt x 56.14111pt.
  [3 <./FIG/autoencoder.png> <./FIG/model.png> <./FIG/loss.png>]
 <FIG/MOS.png, id=34, 1043.39813pt x 278.54062pt>
 File: FIG/MOS.png Graphic file (type png)
  <use FIG/MOS.png>
-Package pdftex.def Info: FIG/MOS.png used on input line 245.
+Package pdftex.def Info: FIG/MOS.png used on input line 217.
 (pdftex.def)             Requested size: 202.58052pt x 54.07932pt.
-
-(ICASSP2019.bbl [4 <./FIG/NN.png> <./FIG/MOS.png>]
+ (arXiv.bbl
+[4 <./FIG/NN.png> <./FIG/MOS.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 32--37
 \OT1/ptm/m/n/10 ``Re-struc-tur-ing speech rep-re-sen-ta-tions us-ing a
  []
@@ -320,31 +320,31 @@ Underfull \hbox (badness 3657) in paragraph at lines 68--73
 []\OT1/ptm/m/n/10 C. Busso, M. Bu-lut, CC Lee, A. Kazemzadeh,
  []
 
-) [5] (ICASSP2019.aux) ) 
+) [5] (arXiv.aux) ) 
 Here is how much of TeX's memory you used:
  2465 strings out of 493323
- 32895 string characters out of 3139066
+ 32829 string characters out of 3139066
  103204 words of memory out of 3000000
  5943 multiletter control sequences out of 15000+200000
  26665 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,25p,1277b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
-c}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
-mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ICASSP2019.pdf (5 pages, 465113 bytes).
+ 39i,10n,25p,1272b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
+rw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on arXiv.pdf (5 pages, 465083 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

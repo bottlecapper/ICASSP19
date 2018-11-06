@@ -57,7 +57,6 @@
 %
 \begin{abstract}
 We propose a nonparallel data-driven emotional speech conversion method. It enables the transfer of emotion-related characteristics of a speech signal while preserving the speaker's identity and linguistic content. Most existing approaches require parallel data and time alignment, which is not available in most real applications. We achieve nonparallel training based on an unsupervised style transfer technique, which learns a translation model between two distributions instead of a deterministic one-to-one mapping between paired examples. The conversion model consists of an encoder and a decoder for each emotion domain. We assume that the speech signal can be decomposed into an emotion-invariant content code and an emotion-related style code in latent space. Emotion conversion is performed by extracting and recombining the content code of the source speech and the style code of the target emotion. We tested our method on a nonparallel corpora with four emotions. Both subjective and objective evaluations show the effectiveness of our approach.
-%This model consists of an autoencoder with a generative adversarial network and is trained with weak cycle consistency loss, adversarial loss, and reconstruction loss
 \end{abstract}
 
 %
@@ -72,31 +71,16 @@ Emotional Speech Conversion, Non-parallel training, Style Transfer, Autoencoder,
 \label{sec:intro}
 Voice transformation (VT) is a technique to modify some properties of human speech while preserving its linguistic information. VT can be applied to change the speaker identity, i.e., voice conversion (VC)~\cite{mohammadi2017overview}, or to transform the speaking style of a speaker, such as emotion and accent conversion~\cite{zhao2018accent}. In this work, we will focus on emotion voice transformation. The goal is to change emotion-related characteristics of a speech signal while preserving its linguistic content and speaker identity. Emotion conversion techniques can be applied to various tasks, such as hiding negative emotions for customer service agents, helping film dubbing, and creating more expressive voice messages on social media.
 
-%{\color{blue}Numerous use-cases exist for this solution including customer service representative conversation masking, financial earnings report conference calls emotion masking, conference room solutions or Instagram-like emotion-filters for speech in social media applications. \textbf{shorter?}}.
-
 Traditional VC approaches cannot be applied directly because they change speaker identity by assuming pronunciation and intonation to be a part of the speaker-independent information. Since the speaker's emotion is mainly conveyed by prosodic aspects, some studies have focused on modelling prosodic features such as pitch, tempo, and volume \cite{wang2012emotional,wang2014multi}. In \cite{xue2018voice}, a rule-based emotional voice conversion system was proposed. It modifies prosody-related acoustic features of neutral speech to generate different types of emotions. A speech analysis-synthesis tool STRAIGHT \cite{kawahara1999restructuring} was used to extract fundamental frequency ($F_0$) and power envelope from raw audio. These features were parameterized and modified based on Fujisaki model \cite{fujisaki1984analysis} and target prediction model \cite{xue2016study}. The converted features were then fed back into STRAIGHT to re-synthesize speech waveforms with desired emotions. However, this method requires temporal aligned parallel data that is difficult to obtain in real applications; and the accurate time alignment needs manual segmentation of the speech signal at phoneme level, which is very time consuming.
-%Thus this method has limitations in real-world situations.
-%The manual interaction and calibration is also very time consuming.
-%On the other side, automatic time alignment algorithm like dynamic time warping (DTW) may cause performance degradation due to mismatching.
-% time consuming and tedious task
 
-%it's harder to get parallel emotional speech corpora (dataset XXX) than VC.
-%need professional actors, since in normal life, it's rare to find angry sentences pronounced in a happy style
 To address these issues, we propose a nonparallel training method. Instead of learning one-to-one mapping between paired emotional utterances $(x_1, x_2)$, we switch to training a conversion model between two emotional domains $(\mathcal{X}_1, \mathcal{X}_2)$.
 
 Inspired by disentangled representation learning in image style transfer \cite{gatys2016image,Huang_2018_ECCV}, we assume that each speech signal $x_i \in \mathcal{X}_i$ can be decomposed into a content code $c \in \mathcal{C}$ that represents emotion-invariant information and a style code $s_i \in \mathcal{S}_i$ that represents emotion-dependent information. $\mathcal{C}$ is shared across domains and contains the information we want to preserve. $\mathcal{S}_i$ is domain-specific and contains the information we want to change. In conversion stage, we extract content code of the source speech and recombine it with style code of the target emotion. A generative adversarial network (GAN) \cite{goodfellow2014generative} is added to improve the quality of converted speech. Our approach is nonparallel, text-independent, and does not rely on any manual operation.
-%It can be trained on a small amount of utterances ($\sim$ 8 min per emotion).
-
-%We employ gated convolutional neural networks (CNNs) ~\cite{dauphin2017language} to model the speech representations. This allows the autoencoder to capture the long-range dependencies in speech. The conversion model is trained with a weak cycle consistency loss ~\cite{Zhu_2017_ICCV, huang2018multimodal}, which helps to create pseudo pairs from nonparallel data. And and keep it indistinguishable from the real ones.
 
 We evaluated our approach on IEMOCAP \cite{busso2008iemocap} for four emotions: angry, happy, neutral, sad; which are widely studied in emotional speech analysis literature.
-%It is a nonparallel dataset widely used in emotional speech recognition and analysis.
 An objective evaluation showed that our model can modify the speech to significantly increase the percentage of desired emotions. A subjective evaluation on Amazon MTurk showed that the converted speech had good quality and preserved the speaker identity.
 
 The rest of the paper is organized as follows: Section \ref{sec:related} presents the relation to prior work. Section \ref{sec:method} gives a detailed description of our model. Experiments and evaluation results are reported in Section \ref{sec:exp}. Finally, we conclude in Section \ref{sec:con}.
-
-%reviews existing work that are most closely related to our approach
-% pairwise transformation function
 
 
 
@@ -104,21 +88,13 @@ The rest of the paper is organized as follows: Section \ref{sec:related} present
 \label{sec:related}
 
 \subsection{Emotion-related features}
-Previous emotion conversion methods directly modify parameterized prosody-related features that convey emotions. ~\cite{kawanami2003gmm} first proposed to use Gaussian mixture models (GMM) for spectrum transformation.
-%[12] introduced a data-driven emotion conversion system that combines independent parameter transformation techniques including HMM-based $F_0$ generation, $F_0$ segment selection, duration conversion and GMM-based spectral conversion. However, it requires large amounts of parallel data.
+Previous emotion conversion methods directly modify parameterized prosody-related features that convey emotions. \cite{kawanami2003gmm} first proposed to use Gaussian mixture models (GMM) for spectrum transformation.
 A recent work ~\cite{xue2018voice} explored four types of acoustic features: $F_0$ contour, spectral sequence, duration and power envelope, and investigated their impact on emotional speech synthesis
-% by controlled feature replacement.
 The authors found that $F_0$ and spectral sequence are the dominant factors in emotion conversion, while power envelope and duration alone has little influence. They further claimed that all emotions can be synthesized by modifying the spectral sequence, but did not provide a method to do it. In this paper, we focus on learning the conversion models for $F_0$ and spectral sequence.
-%Since changing duration and power envelope requires manually segmenting the phoneme boundaries of vowels and consonants, we leave it for future work.
 
 
 \subsection{Nonparallel training approaches}
-%In parallel setting, the training data is limited to a small amount of predefined sentences, which may impair the generalization ability.
-%It is a time consuming and painstaking task to collect parallel data. Training on well-aligned parallel data is easy, but collecting such data is hard.
-Parallel data means utterances with the same linguistic content but varying in aspects to be studied. Since parallel data is hard to collect, nonparallel approaches have been developed. Some borrow ideas from image-to-image translation \cite{NIPS2017_6672} and create GAN models \cite{goodfellow2014generative} suitable for speech, such as VC-VAW-GAN \cite{Hsu2017}, SVC-GAN \cite{Kaneko2017} and VC-CycleGAN \cite{fang2018high}. Another trend is based on WaveNet \cite{van2016wavenet}. Although it can train directly on raw audio without feature extraction, the huge amount of computation resources and training data required is not affordable for most users.
-
-%Our approach only needs a small amount of training data ($\sim$ 8 min per emotion), and does not rely on any transcripts, manual operation, or preprocessing step.
-%Our method differs in that; external data
+Parallel data means utterances with the same linguistic content but varying in aspects to be studied. Since parallel data is hard to collect, nonparallel approaches have been developed. Some borrow ideas from image-to-image translation \cite{NIPS2017_6672} and create GAN models \cite{goodfellow2014generative} suitable for speech, such as VC-VAW-GAN \cite{Hsu2017}, SVC-GAN \cite{Kaneko2017} and VC-CycleGAN \cite{fang2018high}. Another trend is based on WaveNet \cite{van2016wavenet,tamamori2017speaker}. Although it can train directly on raw audio without feature extraction, the huge amount of computation resources and training data required is not affordable for most users.
 
 
 \subsection{Disentangled representation learning}
@@ -130,7 +106,6 @@ Our work draws inspiration from recent studies in image style transfer. A basic 
 \label{sec:method}
 
 \subsection{Assumptions}
-%Emotions are nonlinguistic information not generally controlled by speakers.
 The research on human emotion expression and perception has two major conclusions.
 First, human emotion perception is a multi-layered process. \cite{huang2008three} figured out that humans do not perceive emotion directly from acoustic features, but through an intermediate layer of semantic primitives. They introduced a three-layered model and learnt the connections by a fuzzy inference system. Some researchers found that adding middle layers can improve emotion recognition accuracy. Based on this finding, we suggest the use of multilayer perceptrons (MLP) to extract emotion-related information in speech signals.
 
@@ -155,13 +130,11 @@ It should be noted that the style code $s_i$ is not inferred from one utterance,
 \center
 \includegraphics[width=0.4\textwidth]{FIG/autoencoder}
 \caption{Speech autoencoder model with partially shared latent space. Speech with emotion $i$ is decomposed into an emotion-specific space $\mathcal{S}_i$ and a shared content space $\mathcal{C}$. Corresponding speech $(x_1,x_2)$ are encoded to the same content code $c$.
-%Emotion conversion is obtained by recombining the content code of the input utterance and the style code randomly sampled from the target emotion space.
 }
 \label{autoencoder}
 \end{figure}
 
-% ignore the treasures in computer music before the age of deep learning.
-Traditional emotional speech analysis mainly focuses on four types of acoustic features: fundamental frequency ($F_0$), spectral sequence, time duration and energy envelope. It was found in ~\cite{xue2018voice} that only $F_0$ and spectral sequence have significant influence, while the other two require manual segmentation and have little impact on changing emotions. Therefore we focus on learning the conversion model for $F_0$ and spectral sequence. Fig. \ref{model} shows an overview of our nonparallel emotional speech conversion system. The features are extracted and recombined by WORLD \cite{morise2016world} and converted separately. We modify $F_0$ by linear transform to match statistics of the fundamental frequencies in the target emotion domain. The conversion is performed by log Gaussian normalization
+Traditional emotional speech analysis mainly focuses on four types of acoustic features: fundamental frequency ($F_0$), spectral sequence, time duration and energy envelope. It was found in \cite{xue2018voice} that only $F_0$ and spectral sequence have significant influence, while the other two require manual segmentation and have little impact on changing emotions. Therefore we focus on learning the conversion model for $F_0$ and spectral sequence. Fig. \ref{model} shows an overview of our nonparallel emotional speech conversion system. The features are extracted and recombined by WORLD \cite{morise2016world} and converted separately. We modify $F_0$ by linear transform to match statistics of the fundamental frequencies in the target emotion domain. The conversion is performed by log Gaussian normalization
 \begin{equation}
 f_2 = \exp((\log f_1 - \mu_1)\cdot\frac{\sigma_2}{\sigma_1} + \mu_2)
 \label{eq:f0}
@@ -233,90 +206,24 @@ Our network structure is illustrated in Fig. \ref{fig:NN}. The encoders and deco
 \end{equation}
 We use Adam optimizer and set $\beta_1=0.5$. The learning rate is initialized as $0.0001$ and linearly decayed to $0$ from the $200K$-th iteration. We set $\lambda_s = \lambda_c = \lambda_g = 1$ and $\lambda_x=10$. For training, we randomly sample fixed length frames (128) from the input audio with $16$KHz frequency. Conversion was conducted on speech sequences with arbitrary length.
 
+
 \subsection{Results}
 The results were evaluated on three metrics: emotion correctness, voice quality and the ability to retain speaker identity.
 
-\noindent \textbf{Subjective evaluation \ } We conducted listening tests on Amazon MTurk to evaluate the converted speech \footnote{We provide some converted samples at https://www.jian-gao.org/emovc This work has a pre-printed version on arXiv.org \cite{DBLP:journals/corr/Jian18}}. Each example was listened to by $5$ random evaluators. They were asked to manually classify the emotion, and give $1$-to-$5$ opinion scores on voice quality and the similarity with the original speaker. The mean opinion score (MOS) of the latter two metrics are listed in Fig. \ref{fig:mos}. For subjective emotion classification, we found results consistent with the objective evaluations, therefore omitted for space constraints.
+\noindent \textbf{Subjective evaluation \ } We conducted listening tests on Amazon MTurk to evaluate the converted speech \footnote{We provide some converted samples at https://www.jian-gao.org/emovc}. Each example was listened to by $5$ random evaluators. They were asked to manually classify the emotion, and give $1$-to-$5$ opinion scores on voice quality and the similarity with the original speaker. The mean opinion score (MOS) of the latter two metrics are listed in Fig. \ref{fig:mos}. For subjective emotion classification, we found results consistent with the objective evaluations, therefore omitted for space constraints.
 
-%we found consistent results with the subjective evaluations.
-%The result is shown in Table \ref{tab:sub}. We observe results that are somewhat similar to the model classification results. We also qualitatively surveyed Mturk {\color{blue} workers about} speaker identity retention and over 70\% of respondents identified the generated speech as non-synthetically generated and from the same speaker \footnote{The complete survey results, survey methodology and other results are also provided at https://www.jian-gao.org/emovc}}.
 \begin{figure}[htb]
 \center
 \includegraphics[width=0.4\textwidth]{FIG/MOS}
 \caption{MOS for voice quality and speaker similarity}
 \label{fig:mos}
 \end{figure}
-%\begin{table}[htb]
-%\caption{MOS for voice quality and speaker similarity}
-%\label{tab:mos}
-%\begin{center}
-%\begin{tabular}{|l|l|}
-%    \hline
-%    SGD 		&  $\eta = 0.1$ \\
-%    \hline
-%    Adam 		&  $\eta = 0.0002, \beta_1 = 0.5, \beta_2 = 0.999, \epsilon = 10^{-8}$ \\
-%    \hline
-%    Bregman     &  $t_0 = 0.1, t_{max} = 2.0, \Delta t=10^{-3}$ \\
-%    \hline
-%    SGD 		&  $\eta = 0.005$ \\
-%    \hline
-%    Adam 		&  $\eta = 0.0002, \beta_1 = 0.9, \beta_2 = 0.999, \epsilon = 10^{-8}$ \\
-%    \hline
-%    Bregman     &  $t_0 = 0.5, t_{max} = 3.0, \Delta t=10^{-4}$ \\
-%    \hline
-%\end{tabular}
-%\end{center}
-%\end{table}
-%\begin{table}[ht]
-%\caption{Mechanical Turk Emotion Classification Results}
-%\begin{tabular}{|l|l|l|l|l|}
-%\hline
-%                     & \multicolumn{4}{c|}{\textbf{Predicted Class}} \\ \hline
-%\textbf{IEMOCAP GT}  & Angry   & Happy   & Neutral  & Sad   \\ \hline
-%Angry                & 62\%    & 15\%    & 21\%     & 2\%   \\ \hline
-%Happy                & 12\%    & 51\%    & 34\%     & 2\%   \\ \hline
-%Sad                  & 7\%     & 21\%    & 33\%     & 39\%  \\ \hline
-%Angry to Sad         & 16\%    & 17\%    & 58\%     & 9\%   \\ \hline
-%Sad to Angry         & 17\%    & 16\%    & 32\%     & 35\%  \\ \hline
-%Happy to Sad         & 7\%     & 31\%    & 56\%     & 5\%   \\ \hline
-%Sad to Happy         & 4\%     & 24\%    & 45\%     & 27\%  \\ \hline
-%Angry to Happy       & 53\%    & 17\%    & 27\%     & 3\%   \\ \hline
-%Happy to Angry       & 18\%    & 50\%    & 29\%     & 3\%   \\ \hline
-%\end{tabular}
-%\label{tab:subjective}
-%\end{table}
-\noindent \textbf{Objective evaluation \ } We applied a state-of-the-art speech emotion classifier \cite{mirsamadi2017automatic} for objective evaluation. The results in Table \ref{tab:emo} show that our model can effectively increase the proportion of desired emotions and reduce the original. Note that neutral and sad speech often get mixed up even by humans.
-%{\color{blue}utterances classified into desired emotions}
 
-%{\color{blue} Overlap between neu and sad. }
-%to predict the emotion in the source utterance $x_i$ and converted utterance $x_{i\leftarrow j}'$, $(i \neq j)$. The classifier consists of a Bidirectional LSTM with mean pooling over all time-steps followed by softmax over four emotion classes. {\color{blue} We evaluate the emotion in both labelled utterances from IEMOCAP and the output utterances of our model after conversion for the pairs [Angry$\rightarrow$Sad, Happy$\rightarrow$Sad and Angry$\rightarrow$Happy]. We show results in Table \ref{tab:obj}. We observe that compared to the baseline results, our approach enables emotion transfer from a source emotion towards a target emotion. For example, in the Angry to Sad emotion transfer, most of the Angry emotion is converted into a milder emotion i.e. Neutral or Sad
-%Bi-LSTM Classifier
-%\begin{table}[htb]
-%\caption{Emotion classification by humans and machine \cite{mirsamadi2017automatic}}
-%\label{tab:emo}
-%\begin{center}
-%\begin{tabular}{|l|l|l|l|l|}
-%    \hline
-%    SGD 		&  $\eta = 0.1$ \\
-%    \hline
-%    Adam 		&  $\eta = 0.0002, \beta_1 = 0.5, \beta_2 = 0.999, \epsilon = 10^{-8}$ \\
-%    \hline
-%    Bregman     &  $t_0 = 0.1, t_{max} = 2.0, \Delta t=10^{-3}$ \\
-%    \hline
-%    SGD 		&  $\eta = 0.005$ \\
-%    \hline
-%    Adam 		&  $\eta = 0.0002, \beta_1 = 0.9, \beta_2 = 0.999, \epsilon = 10^{-8}$ \\
-%    \hline
-%    Bregman     &  $t_0 = 0.5, t_{max} = 3.0, \Delta t=10^{-4}$ \\
-%    \hline
-%\end{tabular}
-%\end{center}
-%\end{table}
+\noindent \textbf{Objective evaluation \ } We applied a state-of-the-art speech emotion classifier \cite{mirsamadi2017automatic} for objective evaluation. The results in Table \ref{tab:emo} show that our model can effectively increase the proportion of desired emotions and reduce the original. Note that neutral and sad speech often get mixed up even by humans.
 
 \begin{table}[htb]
 \centering
 \caption{Proportion of classified emotions using~\cite{mirsamadi2017automatic}}
-%\resizebox{0.5\textwidth}{!}{%
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 & \multicolumn{4}{c|}{\textbf{percentage \% original (converted)}} \\ \hline
@@ -335,33 +242,14 @@ hap$\rightarrow$ang       & \textbf{12(63)}      & \textbf{65(16)}    & 12(22)  
 \end{tabular}%}
 \label{tab:emo}
 \end{table}
-%\begin{table}[ht]
-%\caption{Objective evaluation on Bi-Directional LSTM Classifier \cite{mirsamadi2017automatic}}
-%\begin{tabular}{|l|l|l|l|l|}
-%\hline
-%                     & \multicolumn{4}{c|}{\textbf{Predicted Class}} \\ \hline
-%\textbf{IEMOCAP GT}  & Angry   & Happy   & Neutral  & Sad   \\ \hline
-%Angry                & 72\%    & 8\%     & 10\%     & 10\%  \\ \hline
-%Happy                & 12\%    & 65\%    & 12\%     & 12\%  \\ \hline
-%Neutral              & 7\%     & 7\%     & 35\%     & 51\%  \\ \hline
-%Sad                  & 3\%     & 3\%     & 6\%      & 88\%  \\ \hline
-%Angry to Sad         & 0\%     & 5\%     & 74\%     & 21\%  \\ \hline
-%Sad to Angry         & 21\%    & 0\%     & 21\%     & 57\%  \\ \hline
-%Happy to Sad         & 0\%     & 0\%     & 81\%     & 13\%  \\ \hline
-%Sad to Happy         & 21\%    & 0\%     & 21\%     & 57\%  \\ \hline
-%Angry to Happy       & 32\%    & 16\%    & 53\%     & 0\%   \\ \hline
-%Happy to Angry       & 63\%    & 16\%    & 22\%     & 0\%   \\ \hline
-%\end{tabular}
-%\label{tab:objective}
-%\end{table}
+
+
 
 \section{Conclusion and Future work}
 \label{sec:con}
 We presented a nonparallel emotional speech conversion system. Objective and subjective evaluations showed that our model can successfully manipulate emotions to fool the emotion classifier as well as human listeners. As our approach does not require any paired data, transcripts or time alignment, it is easy to be applied in real-world situations. To our knowledge, this is the first work for nonparallel emotion conversion using style transfer. Future work is to develop a multi-domain emotion conversion model for unseen speakers.
 
 \noindent\textbf{Acknowledgements}: This research was supported by Signify Research and U.S. Air Force under grant FA9550-17-1-0259.
-
-%{\color{blue} One limitation is that the current model is restricted to one specific speaker.}
 
 %$x_1, x_2, x_1', x_2'$
 %$s_1, c_1, s_2, c_2$ \\
