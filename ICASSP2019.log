@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  6 NOV 2018 06:25
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  31 OCT 2018 07:08
+>>>>>>> 276fd1801a0a5885c0cd29319350aa7d9c0928bd
 entering extended mode
 **./ICASSP2019.tex
 (ICASSP2019.tex
@@ -323,8 +327,13 @@ Underfull \hbox (badness 3657) in paragraph at lines 68--73
 ) [5] (ICASSP2019.aux) ) 
 Here is how much of TeX's memory you used:
  2465 strings out of 493323
+<<<<<<< HEAD
  32895 string characters out of 3139066
  103204 words of memory out of 3000000
+=======
+ 32889 string characters out of 3139066
+ 103225 words of memory out of 3000000
+>>>>>>> 276fd1801a0a5885c0cd29319350aa7d9c0928bd
  5943 multiletter control sequences out of 15000+200000
  26665 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -344,7 +353,11 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+<<<<<<< HEAD
 Output written on ICASSP2019.pdf (5 pages, 465113 bytes).
+=======
+Output written on ICASSP2019.pdf (5 pages, 465499 bytes).
+>>>>>>> 276fd1801a0a5885c0cd29319350aa7d9c0928bd
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

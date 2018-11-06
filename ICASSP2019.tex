@@ -115,7 +115,11 @@ The authors found that $F_0$ and spectral sequence are the dominant factors in e
 \subsection{Nonparallel training approaches}
 %In parallel setting, the training data is limited to a small amount of predefined sentences, which may impair the generalization ability.
 %It is a time consuming and painstaking task to collect parallel data. Training on well-aligned parallel data is easy, but collecting such data is hard.
+<<<<<<< HEAD
 Parallel data means utterances with the same linguistic content but varying in aspects to be studied. Since parallel data is hard to collect, nonparallel approaches have been developed. Some borrow ideas from image-to-image translation \cite{NIPS2017_6672} and create GAN models \cite{goodfellow2014generative} suitable for speech, such as VC-VAW-GAN \cite{Hsu2017}, SVC-GAN \cite{Kaneko2017} and VC-CycleGAN \cite{fang2018high}. Another trend is based on WaveNet \cite{van2016wavenet}. Although it can train directly on raw audio without feature extraction, the huge amount of computation resources and training data required is not affordable for most users.
+=======
+Parallel data means utterances with the same linguistic content but varying in aspects to be studied. Since parallel data is hard to collect, nonparallel approaches have been developed. Some borrow ideas from image-to-image translation \cite{NIPS2017_6672} and create GAN models \cite{goodfellow2014generative} suitable for speech, such as VC-VAW-GAN \cite{Hsu2017}, SVC-GAN \cite{Kaneko2017} and VC-CycleGAN \cite{fang2018high}. Another trend is based on WaveNet \cite{van2016wavenet,tamamori2017speaker}. Although it can train directly on raw audio without feature extraction, the huge amount of computation resources and training data required is not affordable for most users.
+>>>>>>> 276fd1801a0a5885c0cd29319350aa7d9c0928bd
 
 %Our approach only needs a small amount of training data ($\sim$ 8 min per emotion), and does not rely on any transcripts, manual operation, or preprocessing step.
 %Our method differs in that; external data
@@ -285,8 +289,14 @@ The results were evaluated on three metrics: emotion correctness, voice quality 
 %\end{tabular}
 %\label{tab:subjective}
 %\end{table}
+<<<<<<< HEAD
 \noindent \textbf{Objective evaluation \ } We applied a state-of-the-art speech emotion classifier \cite{mirsamadi2017automatic} for objective evaluation. The results in Table \ref{tab:emo} show that our model can effectively increase the proportion of desired emotions and reduce the original. Note that neutral and sad speech often get mixed up even by humans.
 %{\color{blue}utterances classified into desired emotions}
+=======
+
+
+\noindent \textbf{Objective evaluation \ } We applied a state-of-the-art speech emotion classifier \cite{mirsamadi2017automatic} for objective evaluation. The results in Table \ref{tab:emo} show that our model can effectively increase the percentage of desired emotions and reduce the original. Note that neutral and sad speech often get mixed up even by humans.
+>>>>>>> 276fd1801a0a5885c0cd29319350aa7d9c0928bd
 
 %{\color{blue} Overlap between neu and sad. }
 %to predict the emotion in the source utterance $x_i$ and converted utterance $x_{i\leftarrow j}'$, $(i \neq j)$. The classifier consists of a Bidirectional LSTM with mean pooling over all time-steps followed by softmax over four emotion classes. {\color{blue} We evaluate the emotion in both labelled utterances from IEMOCAP and the output utterances of our model after conversion for the pairs [Angry$\rightarrow$Sad, Happy$\rightarrow$Sad and Angry$\rightarrow$Happy]. We show results in Table \ref{tab:obj}. We observe that compared to the baseline results, our approach enables emotion transfer from a source emotion towards a target emotion. For example, in the Angry to Sad emotion transfer, most of the Angry emotion is converted into a milder emotion i.e. Neutral or Sad
