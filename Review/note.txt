@@ -1,0 +1,97 @@
+
+
+Major changes: 
+1. in model part, include duration conversion (how to do?) DTW - code
+2. in evaluation part, find a baseline approach for comparison; if not, just use F0
+	parallel --- ? (Code)
+3. in evaluation part, find a better classification approach (not mix neutral with sad)
+	2018 - state-of-the-art, paper/code in 2019
+
+Minor changes:
+4. show the detailed architecture of encoder-decoder (layers, units, and reception field)
+5. better description of the dataset (#training and testing samples)
+6. test on multiple speakers and more human listeners (3 speakers, 50 listeners)
+7. explain the table
+Other concerns:
+8. Some visual representation (for e.g., t-sne) of style code
+	code
+9. Follow other nonparallel conversion works
+	visualization, evaluation (CycleGAN VC)
+
+
+---- Comments from the Reviewers: ----
+Importance/Relevance: Of broad interest
+
+Novelty/Originality: Moderately original
+
+Technical Correctness: Probably correct
+
+Experimental Validation: Lacking in some respect
+Comment on Experimental Validation: 
+The experimental analysis is incomplete and the authors didn’t include any baseline for comparison. The number of listeners (5) considered for each test sample is very less and the test set size was not mentioned at all. 
+
+Clarity of Presentation: Clear enough
+
+Reference to Prior Work: References adequate
+
+General Comments to Authors: 
+Summary: The paper proposes a non parallel approach for emotional speech conversion by preserving the speaker identity and linguistic content. The proposed technique follows an encoder decoder approach (without any attention), with disentangled encoders for separation of emotion invariant speech content and style code, and a GAN for decoding mel-cepstral features given the output from encoders. F0 conversion follows a traditional linear transformation from VC and duration remained same. 
+
+Strengths of the paper: A non-parallel approach making use of disentangled encoders for separation of emotional invariant speech and emotion style, and joint training of encoders and GANs with different loss functions. The technical paradigm used in the paper sounded right and the paper was well written with each component of the approach explained detailed. 
+
+Weakness: For emotion conversion, duration conversion alone might have less influence but its impact on emotional conversion is very significant, as each emotion varies in phonetic duration. The authors completely ignored duration conversion and F0 transformation was performed linearly. The experimental analysis is incomplete and the authors didn’t include any baseline for comparison. The number of listeners (5) considered for each test sample is very less and the test set size was not mentioned at all. The results from both objective and subjective listening test are not convincing and doesn’t clearly demonstrate the conversion of emotions. 
+
+Additional points:
+Section 2.1 covers the motivation for using only F0 and spectral features and the same is repeated again in 3rd paragraph of section 3.2, which is completely redundant. The same space can be used for expanding results section (by including results from subjective analysis of emotion classification and results from a baseline). Some visual representation (for e.g., t-sne) of style code would be beneficial for readers. 
+
+The voice quality of the converted samples suggests that it is difficult to classify an emotion from a perceptual experiment. Therefore, claiming that the conversion achieved a model which can reasonably fool both human listeners and automated classifier is a bit vague as any reasonable model introduces some distortion during conversion.  
+
+
+-----
+Importance/Relevance: Of sufficient interest
+
+Novelty/Originality: Moderately original
+
+Technical Correctness: Probably correct
+
+Experimental Validation: Sufficient validation/theoretical paper
+
+Clarity of Presentation: Clear enough
+
+Reference to Prior Work: References adequate
+
+General Comments to Authors: 
+Please add some explanation on how you came to the different values of the lambdas. Was it intuition, experiment, literature?
+
+-----
+Importance/Relevance: Of sufficient interest
+
+Novelty/Originality: Moderately original
+
+Technical Correctness: Probably correct
+Comment on Technical Correctness: 
+The system is detailed but it has many parts that would deserve larger explanations.
+
+Experimental Validation: Limited but convincing
+Comment on Experimental Validation: 
+The authors claim that their system can work with non-parallel training material but they do not mention whether the emotion conversion system is speaker independent or not. You should discuss on this and include some experiments with different speakers.
+
+Only one speaker has been used for emotion conversion tests. Additional tests with different speakers would be desirable. The amount (number of sentences for instance) of the training and testing material is not specified, and neither if the test signals were or not part of the training material.
+
+A baseline system (even a simple F0 conversion) should have been used in the validation experiment in order to give an idea of the actual significance of the performance of the system. It has to be taken into account that the emotion conversion task (intraspeaker) is not the most challenging one.
+
+
+Clarity of Presentation: Clear enough
+Comment on Clarity of Presentation: 
+Details of the architecture of the neural system is missing: number of neurons/CNN filters of the layers, receptive field of the CNN filters,... A diagram showing the full system and the interconnection of its constituent parts would be of some help.
+Table 1 is very hard to understand, you should explain what the original % and converted % mean and probably you should calculate a measure to indicate in a global way, how much the classifier shifts towards the converted emotion from the original material. One of the weakeness of the objective evaluation is that the classifier is not very discriminative for certain classes even with the original material: neutral is mixed with sad, sad with happy & neutral, etc. you should comment on this.
+Images are hardly readable due to their small size.
+
+
+Reference to Prior Work: References adequate
+Comment on Reference to Prior Work: 
+Some references about other nonparallel conversion works and why you have not follow their approaches would be convenient.
+
+
+
+
